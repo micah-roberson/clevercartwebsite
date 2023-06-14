@@ -75,7 +75,7 @@
                         </li>
                    
                         <li class="nav-item text-center">
-                            <a class="get-app btn" href="betasignup.html">Get App</a>
+                            <a class="get-app btn" href="#">Get App</a>
                         </li>
                     </ul>
                 </div>
@@ -93,18 +93,124 @@
         <div class="plan-bg-image anm" data-speed-x="10" data-speed-rotate="-10">
            
         </div>
-        <div class="row">
-            <div class="col-12 col-lg-8 m-auto">
-                <h2>About <span class="text-green">CleverCart</span></h2>
-                <p>
-                    Founded by a team of two Indiana University students, CleverCart was created to address the current lack of access to cheap, easy, and healthy eating that so many people face. 
-
-​
-
-CleverCart was born from a conversation with Micah's Mom. She was frustrated with the hassle of trying to find the best prices for groceries, in combination with trying to plan a nutritious diet. Like a typical parent, she would rather spend her time on other things than scanning grocery flyers, searching digital coupons, and planning meals every week. Like many of us, she was also confused by the contradictory information bombarding us with what is nutritious or not.
-      
-​
-                </p>
+        <div >
+            <div class="col-12 col-lg-8 mx-auto">
+                
+                
+                    <head>
+                        <title>Contact Form</title>
+                        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                        <script type="text/javascript">
+                            (function() {
+                                // https://dashboard.emailjs.com/admin/account
+                                emailjs.init('DSCTou-qbFVslA9Cl');
+                            })();
+                        </script>
+                        <script type="text/javascript">
+                            window.onload = function() {
+                                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                                    event.preventDefault();
+                                    // generate a five digit number for the contact_number variable
+                                    this.contact_number.value = Math.random() * 100000 | 0;
+                                    // these IDs from the previous steps
+                                    emailjs.sendForm('service_squszm5', 'template_2tebqc7', this)
+                                        .then(function() {
+                                            console.log('SUCCESS!');
+                                        }, function(error) {
+                                            console.log('FAILED...', error);
+                                        });
+                                });
+                            }
+                        </script>
+                    </head>
+                  
+                    <style>
+                      
+                    
+                        .container1 {
+                          max-width: 400px;
+                          width: 100%;
+                          padding: 2rem;
+                          background-color: #fff;
+                          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                          border-radius: 15px;
+                          margin-bottom: -30px;
+                        }
+                    
+                        .container h1 {
+                          text-align: center;
+                          font-size: 1.5rem;
+                          margin-bottom: 1.5rem;
+                        }
+                    
+                        .form-group {
+                          margin-bottom: 1rem;
+                        }
+                    
+                        .form-group label {
+                          display: block;
+                          margin-bottom: 0.5rem;
+                          font-weight: 600;
+                          font-size: 0.875rem;
+                          color: #35CE76;
+                        }
+                    
+                        .form-group input,
+                        .form-group textarea {
+                          width: 100%;
+                          padding: 0.75rem;
+                          border: 1px solid #cbd5e0;
+                          border-radius: 0.25rem;
+                          font-size: 0.875rem;
+                          color: #35CE76;
+                        }
+                    
+                        .form-group textarea {
+                          resize: vertical;
+                          min-height: 120px;
+                        }
+                    
+                        .form-group input[type="submit"] {
+                          padding: 0.75rem 1.5rem;
+                          font-weight: 600;
+                          color: #fff;
+                          background-color: #35CE76;
+                          border: none;
+                          border-radius: 0.25rem;
+                          cursor: pointer;
+                          transition: background-color 0.3s ease;
+                        }
+                    
+                        .form-group input[type="submit"]:hover {
+                          background-color: #434190;
+                        }
+                      </style>
+                    </head>
+                    
+                    <body>
+                      <div class="container1 mx-auto">
+                        <h2>Sign Up for Our<span class="text-green"> Beta</span></h2>
+                        <div class="col-12 col-lg-8 m-auto">
+                          <form id="contact-form">
+                            <input type="hidden" name="contact_number">
+                            <div class="form-group">
+                              <input style="border-radius: 15px; border-width: 1px; border-color: black; padding-left: 8px; padding-right: 8px;"
+                                type="text" name="user_name" placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                              <input style="border-radius: 15px; border-width: 1px; border-color: black; padding-left: 8px; padding-right: 8px;"
+                                type="email" name="user_email" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                              <input style="border-radius: 15px; border-width: 1px; border-color: black; padding-left: 8px; padding-right: 8px;"
+                                type="submit" value="Subscribe!">
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </body>
+                    
+               
             
             </div>
         </div>
@@ -115,9 +221,9 @@ CleverCart was born from a conversation with Micah's Mom. She was frustrated wit
     <div class="container pt-5">
         <div class="row">
             <div class="col-12 col-lg-8 m-auto">
-                <h2 class="mb-3">The  <span class="text-bold">Team</span></h2>
+                <h2 class="mb-3">Will be released  <span class="text-bold">This year</span></h2>
                 <p>
-                   These people make this app possible
+                   See you soon!
                 </p>
           
             </div>
@@ -127,73 +233,9 @@ CleverCart was born from a conversation with Micah's Mom. She was frustrated wit
 
 <!-- End Plan Section -->
     <!-- Features Section -->
-    <section id="features" class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-6 col-md-6">
-                    <img  style="border-radius:30px" src="images/arpan.png" width="300" height="300"/>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 d-flex flex-column my-auto">
-                    <h2>Arpan Ojha <span class="text-green">CEO-T</span></h2>
-                    <p>
-                        Technical CEO for CleverCart.
-                        Arpan Ojha is an experienced CEO with a strong background as a Software Developer in the computer software industry. Graduating from Indiana University Bloomington with a focus on data science, Arpan possesses exceptional analytical and problem-solving skills, specializing in Data Analytics, Computer Vision, and Robotics. With a proven track record as an independent worker and excellent communication skills, Arpan is dedicated to driving innovation and success at CleverCart.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+    
     <!-- End Features Section -->
-    <section id="features" class="mt-5">
-        <div class="container">
-            <div class="row">
-              
-                <div class="col-12 col-lg-6 col-md-6 d-flex flex-column my-auto">
-                    <h2>Micah Roberson <span class="text-green">CEO-B</span></h2>
-                    <p>
-                       Busieness CEO for CleverCart.
-                       Micah Roberson is an enterprising CEO with a passion for innovation and a diverse background in Quantum/Physics, Finance, and Corporate Innovation. With a track record of starting ventures since a young age, including CleverCart, Micah brings cutting-edge technology expertise and leadership abilities. Alongside his professional endeavors, he actively contributes to poverty alleviation and community engagement initiatives.
-                    </p>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6">
-                    <img  style="border-radius:30px" src="images/micah.PNG"  width="300" height="300"/>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="features" class="mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-lg-6 col-md-6">
-                    <img style="border-radius:30px" src="images/DheerajManchandia.jpg"  width="300" height="300"/>
-                </div>
-                <div class="col-12 col-lg-6 col-md-6 d-flex flex-column my-auto">
-                    <h2>Dheeraj Manchandia <span class="text-green">Data Science</span></h2>
-                    <p>Dheeraj Manchandia is an ambitious and driven individual currently pursuing a Masters in Computer Science at Indiana University Bloomington. With a strong foundation in data analytics and AI/ML, Dheeraj's keen eye for detail and problem-solving mindset enables him to contribute effectively to team projects and deliver results as a Data Science intern at CleverCart. With valuable experience as a Software Engineer, Dheeraj brings insights into software development and thrives in fast-paced environments, aligning perfectly with CleverCart's innovative solutions and impact-driven approach. Connect with Dheeraj on LinkedIn (https://www.linkedin.com/in/dheeraj-manchandia/) or reach out via email at dheerajmanchandia@gmail.com to collaborate with this talented individual who shares a passion for driving success.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Features Section -->
-    <section id="features" class="mt-5">
-        <div class="container">
-            <div class="row">
-              
-                <div class="col-12 col-lg-6 col-md-6 d-flex flex-column my-auto">
-                    <h2>Garren Lee <span class="text-green">Data Science</span></h2>
-                    <p>
-                       
-Garren Lee is a Statistics and Data Science student at UCLA, specializing in data analytics, data science, and statistical consulting. Connect with Garren on LinkedIn (https://www.linkedin.com/in/garren-lee/) to explore his expertise and passion for leveraging data to drive impactful insights and solutions.
-                    </p>
-                </div>
-                <div  class="col-12 col-lg-6 col-md-6">
-                    <img style="border-radius:30px" width="300" height="300" src="images/garren.jpeg"/>
-                </div>
-            </div>
-        </div>
-    </section>
- 
+    
 
     <!-- Manage Section -->
  
