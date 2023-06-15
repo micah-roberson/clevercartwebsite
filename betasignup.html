@@ -71,7 +71,7 @@
                             <a class="nav-link" href="index.html">Home</a>
                         </li>
                         <li class="nav-item text-center">
-                            <a class="nav-link" href="#">FAQ</a>
+                            <a class="nav-link" href="betasignup.html">FAQ</a>
                         </li>
                    
                         <li class="nav-item text-center">
@@ -115,11 +115,18 @@
                                     // these IDs from the previous steps
                                     emailjs.sendForm('service_squszm5', 'template_2tebqc7', this)
                                         .then(function() {
-                                            console.log('SUCCESS!');
+                                            showSuccessMessage();
                                         }, function(error) {
                                             console.log('FAILED...', error);
                                         });
                                 });
+                                function showSuccessMessage() {
+                                const form = document.getElementById('contact-form');
+                                const successMessage = document.createElement('p');
+                                successMessage.textContent = 'You are subscribed!';
+                                successMessage.classList.add('text-center', 'text-green-500', 'font-semibold');
+                                form.parentNode.replaceChild(successMessage, form);
+                            }
                             }
                         </script>
                     </head>
@@ -195,11 +202,11 @@
                             <input type="hidden" name="contact_number">
                             <div class="form-group">
                               <input style="border-radius: 15px; border-width: 1px; border-color: black; padding-left: 8px; padding-right: 8px;"
-                                type="text" name="user_name" placeholder="Name">
+                                type="text"  name="from_name" id="from_name"placeholder="Name">
                             </div>
                             <div class="form-group">
                               <input style="border-radius: 15px; border-width: 1px; border-color: black; padding-left: 8px; padding-right: 8px;"
-                                type="email" name="user_email" placeholder="Email">
+                                type="email"  name="message" id="message" placeholder="Email">
                             </div>
                             <div class="form-group">
                               <input style="border-radius: 15px; border-width: 1px; border-color: black; padding-left: 8px; padding-right: 8px;"
