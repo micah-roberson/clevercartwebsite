@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+    <meta name="msapplication-TileColor" content="#00a300">
+    <meta name="theme-color" content="#ffffff">
+    <!-- End of Favicon -->
+
+    <!-- Required Social Preview MetaTags -->
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="CleverCart | Meal Plan and Optimization App">
+    <meta name="description"
+        content="clevercart revolutionizes the way people grocery shop by buying grocery carts at a time">
+
+    <!-- Open Graph / Facebook -->
+
+
+    <!-- ROBOTO - Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+    <!-- Main CSS Linking -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Bootstrap 4.5.3 Stylesheet CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>CleverCart | Meal Plan and Optimization App</title>
+</head>
+
+<body data-anm=".anm">
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Hero Section -->
+    <div id="hero" class="bg-green">
+        <!-- Background Image -->
+        <div class="bg-image anm" data-speed-x="10" data-speed-y="10" data-speed-rotate="-10">
+           
+        </div>
+
+        <!-- Hero Contents -->
+        <div class="container text-white">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light pt-3 text-white">
+                <!-- logo -->
+                <a class="navbar-brand" href=""><img src="images/logo.png" alt=""></a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
+                    aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggle-icon">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots-vertical"
+                            fill="#ffffff" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd"
+                                d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
+                        </svg></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                    <ul class="navbar-nav text-center ml-auto mt-2 mt-lg-0">
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="betasignup.html">FAQ</a>
+                        </li>
+                   
+                        <li class="nav-item text-center">
+                            <a class="get-app btn" href="#">Get App</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <!-- Hero Main Items -->
+            
+
+        </div>
+    </div>
+    <!-- End Hero Section -->
+   <!-- Plan Section -->
+   <div id="plan" class="bg-shade text-center pt-5">
+    <div class="container  pt-5">
+        <div class="plan-bg-image anm" data-speed-x="10" data-speed-rotate="-10">
+           
+        </div>
+        <div >
+            <div class="col-12 col-lg-8 mx-auto">
+                
+                
+                    <head>
+                        <title>Contact Form</title>
+                        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+                        <script type="text/javascript">
+                            (function() {
+                                // https://dashboard.emailjs.com/admin/account
+                                emailjs.init('DSCTou-qbFVslA9Cl');
+                            })();
+                        </script>
+                        <script type="text/javascript">
+                            window.onload = function() {
+                                document.getElementById('contact-form').addEventListener('submit', function(event) {
+                                    event.preventDefault();
+                                    // generate a five digit number for the contact_number variable
+                                    this.contact_number.value = Math.random() * 100000 | 0;
+                                    // these IDs from the previous steps
+                                    emailjs.sendForm('service_squszm5', 'template_2tebqc7', this)
+                                        .then(function() {
+                                            showSuccessMessage();
+                                        }, function(error) {
+                                            console.log('FAILED...', error);
+                                        });
+                                });
+                                function showSuccessMessage() {
+                                const form = document.getElementById('contact-form');
+                                const successMessage = document.createElement('p');
+                                successMessage.textContent = 'You are subscribed!';
+                                successMessage.classList.add('text-center', 'text-green-500', 'font-semibold');
+                                form.parentNode.replaceChild(successMessage, form);
+                            }
+                            }
+                        </script>
+                    </head>
+                  
+                    <style>
+                      
+                    
+                        .container1 {
+                          max-width: 400px;
+                          width: 100%;
+                          padding: 2rem;
+                          background-color: #fff;
+                          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+                          border-radius: 15px;
+                          margin-bottom: -30px;
+                        }
+                    
+                        .container h1 {
+                          text-align: center;
+                          font-size: 1.5rem;
+                          margin-bottom: 1.5rem;
+                        }
+                    
+                        .form-group {
+                          margin-bottom: 1rem;
+                        }
+                    
+                        .form-group label {
+                          display: block;
+                          margin-bottom: 0.5rem;
+                          font-weight: 600;
+                          font-size: 0.875rem;
+                          color: #35CE76;
+                        }
+                    
+                        .form-group input,
+                        .form-group textarea {
+                          width: 100%;
+                          padding: 0.75rem;
+                          border: 1px solid #cbd5e0;
+                          border-radius: 0.25rem;
+                          font-size: 0.875rem;
+                          color: #35CE76;
+                        }
+                    
+                        .form-group textarea {
+                          resize: vertical;
+                          min-height: 120px;
+                        }
+                    
+                        .form-group input[type="submit"] {
+                          padding: 0.75rem 1.5rem;
+                          font-weight: 600;
+                          color: #fff;
+                          background-color: #35CE76;
+                          border: none;
+                          border-radius: 0.25rem;
+                          cursor: pointer;
+                          transition: background-color 0.3s ease;
+                        }
+                    
+                        .form-group input[type="submit"]:hover {
+                          background-color: #434190;
+                        }
+                      </style>
+                    </head>
+                    
+                    <body>
+                      <div class="container1 mx-auto">
+                        <h2>Delete Your<span class="text-green"> UserData</span></h2>
+                        <div class="col-12 col-lg-8 m-auto">
+                          <form id="contact-form">
+                            <input type="hidden" name="contact_number">
+                            <div class="form-group">
+                              <input style="border-radius: 15px; border-width: 1px; border-color: black; padding-left: 8px; padding-right: 8px;"
+                                type="text"  name="from_name" id="from_name"placeholder="Name">
+                            </div>
+                            <div class="form-group">
+                              <input style="border-radius: 15px; border-width: 1px; border-color: black; padding-left: 8px; padding-right: 8px;"
+                                type="email"  name="message" id="message" placeholder="Email">
+                            </div>
+                            <div class="form-group">
+                              <input style="border-radius: 15px; border-width: 1px; border-color: black; padding-left: 8px; padding-right: 8px;"
+                                type="submit" value="Subscribe!">
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    </body>
+                    
+               
+            
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="footer" class="text-white text-center">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-12 col-lg-8 m-auto">
+                <h2 class="mb-3">Will be released  <span class="text-bold">This year</span></h2>
+                <p>
+                   See you soon!
+                </p>
+          
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- End Plan Section -->
+    <!-- Features Section -->
+    
+    <!-- End Features Section -->
+    
+
+    <!-- Manage Section -->
+ 
+    <!-- End Manage Section -->
+
+    <!-- Footer Section -->
+    
+    <!-- End Footer Section -->
+
+    <!--   Bootstrap jQuery CDN   -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+    
+    <script>
+        // Anm © 2014-2015 Andrey Polischuk github.com/andrepolischuk/anm
+            !function () { "use strict"; function g() { } function i(a) { var b = {}; return b.x = a.clientX - window.innerWidth / 2 || 0, b.y = a.clientY - window.innerHeight / 2 || 0, b.fi = Math.atan(0 === b.x ? 1 / 0 : -b.y / b.x) + (b.x < 0 ? Math.PI : -b.y < 0 ? 2 * Math.PI : 0), b.s = 45 * Math.sin(2 * b.fi) / 100, b.x /= 100, b.y /= 100, b.r = 2 * (Math.sqrt(Math.pow(b.x, 2) + Math.pow(b.y, 2)) / Math.sqrt(Math.pow(window.innerWidth, 2) + Math.pow(window.innerHeight, 2))), b } function j(a) { for (var b = {}, c = 0; c < e.length; c++)b[e[c]] = +a.getAttribute("data-speed-" + e[c]) || 0; return b } function k(a, b) { var c = {}; return c.x = a.x * b.x + "px", c.y = a.y * b.y + "px", c.scale = 1 + a.r * b.scale, c.opacity = 1 - a.r * Math.abs(b.opacity), c.rotate = 100 * -a.s * a.r * b.rotate + "deg", c } function l(a, c) { if (b) a.style.marginLeft = c.x, a.style.marginTop = c.y; else { for (var d in f) f.hasOwnProperty(d) && (a.style[d] = [f[d], "(", c.x + "," + c.y, "translate" === f[d] ? "" : ",0", ") scale(", c.scale, ") rotate(", c.rotate, ")"].join("")); a.style.opacity = c.opacity, a.style.MozOpacity = c.opacity } } function m(a) { if (!d) { a = "touchmove" === a.type ? a.changedTouches[0] : a; for (var b, c, g, e = i(a), f = 0; f < h.length; f++)g = h[f], b = j(g), c = k(e, b), l(g, c) } } var a = document.body.getAttribute("data-anm"); if (a) { var d, b = /MSIE.\d+\./gi.test(navigator.userAgent) && +navigator.userAgent.replace(/.*MSIE.(\d+)\..*/gi, "$1") < 9, c = "ontouchstart" in window || "onmsgesturechange" in window ? "touchmove" : "mousemove", e = ["x", "y", "scale", "opacity", "rotate"], f = { webkitTransform: "translate3d", MozTransform: "translate3d", msTransform: "translate3d", OTransform: "translate", transform: "translate3d" }, h = g.elements = document.querySelectorAll(a); g.on = function () { d = !1 }, g.off = function () { d = !0 }, g.toggle = function () { d = !d }, m({}), window.addEventListener ? window.addEventListener(c, m, !1) : window.attachEvent("onmousemove", function () { m.call(window, window.event) }), "function" == typeof define && define.amd ? define([], function () { return g }) : "undefined" != typeof module && module.exports ? module.exports = g : this.anm = g } }.call(this);
+
+
+            // Preloader
+            document.querySelector(".preloader").classList.add("opacity-0");
+            setTimeout(function () {
+                document.querySelector(".preloader").style.display = "none";
+            }, 1000);
+
+            // Initialize plugin
+            anm.on();
+    </script>
+</body>
+
+</html>
