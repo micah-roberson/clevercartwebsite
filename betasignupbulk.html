@@ -108,67 +108,6 @@
                 
                     <head>
                         <title>Contact Form</title>
-                        <script src="https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js"></script>
-                                    <script src="https://www.gstatic.com/firebasejs/9.6.5/firebase-firestore.js"></script>
-                                    <script>
-                                        // Firebase configuration
-                                        const firebaseConfig = {
-                                            apiKey: "AIzaSyBjSSCOpWwBgu2fmVT0lxD6VmXB_ZbwU4c",
-                                            authDomain: "cleverwebsite-d95ab.firebaseapp.com",
-                                            databaseURL: "https://cleverwebsite-d95ab-default-rtdb.firebaseio.com",
-                                            projectId: "cleverwebsite-d95ab",
-                                            storageBucket: "cleverwebsite-d95ab.appspot.com",
-                                            messagingSenderId: "102930930143",
-                                            appId: "1:102930930143:web:cb861d202ade0f9dc44c6a",
-                                            measurementId: "G-LCDYZ9ZYCC"
-                                            };
-
-                                        // Initialize Firebase
-                                        firebase.initializeApp(firebaseConfig);
-
-                                        // Initialize Firestore
-                                        const db = firebase.firestore();
-                                    </script>
-                                    <script>
-                                        window.onload = function() {
-                                            document.getElementById('contact-form').addEventListener('submit', function(event) {
-                                                event.preventDefault();
-
-                                                // Collect name, email, and origin from the form
-                                                var name = document.getElementById('from_name').value.trim();
-                                                var email = document.getElementById('message').value.trim();
-                                                var origin = "Your Origin Value"; // Replace this with your actual origin value
-
-                                                // Validate the form
-                                                if (name === '' || email === '') {
-                                                    alert('Please fill in all fields.');
-                                                    return;
-                                                }
-
-                                                // Add the data to Firestore
-                                                db.collection("emailcollection").add({
-                                                    name: name,
-                                                    email: email,
-                                                    origin: origin
-                                                })
-                                                .then(function(docRef) {
-                                                    console.log("Document written with ID: ", docRef.id);
-                                                    showSuccessMessage();
-                                                })
-                                                .catch(function(error) {
-                                                    console.error("Error adding document: ", error);
-                                                });
-                                            });
-
-                                            function showSuccessMessage() {
-                                                const form = document.getElementById('contact-form');
-                                                const successMessage = document.createElement('p');
-                                                successMessage.textContent = 'You are subscribed!';
-                                                successMessage.classList.add('text-center', 'text-green-500', 'font-semibold');
-                                                form.parentNode.replaceChild(successMessage, form);
-                                            }
-                                        }
-                                    </script>
                         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
                         <script type="text/javascript">
                             (function() {
@@ -176,27 +115,37 @@
                                 emailjs.init('DSCTou-qbFVslA9Cl');
                             })();
                         </script>
-                        <script type="text/javascript">
+                           <script>
                             window.onload = function() {
                                 document.getElementById('contact-form').addEventListener('submit', function(event) {
                                     event.preventDefault();
-                                    // generate a five digit number for the contact_number variable
+                                    
+                                    var nameInput = document.getElementById('from_name');
+                                    var emailInput = document.getElementById('message');
+                                    
+                                    // Update the name input value with an additional word
+                                    var newName = nameInput.value.trim() + " Bulk";
+                                    nameInput.value = newName;
+                        
+                                    // Generate a five digit number for the contact_number variable
                                     this.contact_number.value = Math.random() * 100000 | 0;
-                                    // these IDs from the previous steps
-                                    emailjs.sendForm('service_squszm5', 'template_2tebqc7', this)
+                                    
+                                    // These IDs are from the previous steps
+                                    emailjs.sendForm('service_squszm5', 'template_rp34ywf1', this)
                                         .then(function() {
                                             showSuccessMessage();
                                         }, function(error) {
                                             console.log('FAILED...', error);
                                         });
                                 });
+                                
                                 function showSuccessMessage() {
-                                const form = document.getElementById('contact-form');
-                                const successMessage = document.createElement('p');
-                                successMessage.textContent = 'You are subscribed!';
-                                successMessage.classList.add('text-center', 'text-green-500', 'font-semibold');
-                                form.parentNode.replaceChild(successMessage, form);
-                            }
+                                    const form = document.getElementById('contact-form');
+                                    const successMessage = document.createElement('p');
+                                    successMessage.textContent = 'You are subscribed!';
+                                    successMessage.classList.add('text-center', 'text-green-500', 'font-semibold');
+                                    form.parentNode.replaceChild(successMessage, form);
+                                }
                             }
                         </script>
                     </head>
@@ -281,7 +230,6 @@
                                         <input style="border-radius: 15px; border-width: 1px; border-color: black; padding-left: 8px; padding-right: 8px;"
                                             type="submit" value="Subscribe!" onclick="return validateForm()">
                                     </div>
-                                    <iframe width="640px" height="480px" src="https://forms.office.com/Pages/ResponsePage.aspx?id=NL4TEdGuAE2rS83QJRC-kQjPwLTqfCdCknki2GIx8r9UNkYwN1RJT1VYWFMxSVVHQlhYQTZHODlMMi4u&embed=true" frameborder="0" marginwidth="0" marginheight="0" style="border: none; max-width:100%; max-height:100vh" allowfullscreen webkitallowfullscreen mozallowfullscreen msallowfullscreen> </iframe>
                                 </form>
                             </div>
                         </div>
